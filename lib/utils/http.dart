@@ -55,8 +55,6 @@ class Fetch{
 
   static post({String url = '', Map<dynamic, dynamic>data}) async {
     if (data.isEmpty) data = Map();
-    print('url: $url');
-    print('data: $data');
     dio.interceptors.add(CookieManager((await CookieInstance.cookieJar)));
     Response res;
     try {
@@ -69,7 +67,9 @@ class Fetch{
       if (res.data['errorCode'] == '-00004') {
         (await CookieInstance.cookieJar).delete(Uri.parse('http://api.zhenai.com$url')); // 为什么没效果，呜呜呜呜
       }
+
     } on DioError catch(e) {
+      print(e);
       if(e.response == null) {
         print('e.response is null: ');
       } else{
@@ -77,6 +77,7 @@ class Fetch{
         print(e.message);
       }
     }
+    print('res: $res');
     return res.data;
   }
 }

@@ -5,9 +5,9 @@ import './reducer.dart';
 class ZhenaiStore {
   static ZhenaiStore _instance;
 
-  Store storeInstance;
+  Store _storeInstance;
 
-  get store => storeInstance;
+  get store => _storeInstance;
 
   ZhenaiStore._();
 
@@ -17,9 +17,8 @@ class ZhenaiStore {
 
   static init() {
     if (_instance == null) {
-      print('ZhenaiStore: init');
       _instance = ZhenaiStore._();
-      _instance.storeInstance = Store<AppState>(
+      _instance._storeInstance = Store<AppState>(
           appStateReducer,
           initialState: AppState.initialState()
       );

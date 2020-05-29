@@ -47,7 +47,6 @@ class _FooterNav extends State<FooterNav> {
   }
 }
 
-
 class NavItem extends StatefulWidget {
   final name;
   final img;

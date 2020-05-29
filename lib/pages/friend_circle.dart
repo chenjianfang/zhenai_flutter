@@ -41,7 +41,10 @@ class _FriendCircleBody extends State<FriendCircleBody> {
                 content: Text('上传你的头像'),
                 actions: [
                   CupertinoDialogAction(
-                      child: Text('No')
+                      child: Text('No'),
+                      onPressed: () {
+                        Navigator.pop(context, false);
+                      },
                   ),
                   CupertinoDialogAction(
                       child: Text('Yes'),
