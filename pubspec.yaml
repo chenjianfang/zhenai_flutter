@@ -1,5 +1,5 @@
 name: zhenai
-description: 珍爱网
+description: '珍爱网'
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
@@ -24,9 +24,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
 
   english_words: ^3.1.0
@@ -37,8 +34,6 @@ dependencies:
 
   cookie_jar: ^1.0.0
 
-  path_provider: ^1.6.0
-
   device_info: ^0.4.2+3
 
   flutter_screenutil: ^1.0.2
@@ -46,6 +41,16 @@ dependencies:
   flutter_redux: ^0.6.0
 
   redux: ^4.0.0
+
+  path_provider: ^1.6.9
+
+  firebase_core: 0.3.2
+#  firebase_admob: ^0.8.0+3
+#  firebase_analytics: ^2.1.1
+#  firebase_auth: ^0.8.4
+#  firebase_crashlytics: ^0.0.4+1
+#  firebase_remote_config: ^0.1.0+2
+#  cloud_firestore: ^0.9.11
 
 dev_dependencies:
   flutter_test:
